@@ -11,5 +11,15 @@ class AuthorController extends RestfulController<Author> {
     AuthorController() {
         super(Author)
     }
-    
+
+    @Transactional
+    def createDefaultBooks() {
+        Author author = Author.get(params.authorId)
+
+        List books = (1..4).collect {
+            new Book(author: author, title: "The Art of Computer Programming, Vol. $it")
+        }
+        books*.save(flush: true)
+
+        render books as JSON
 }

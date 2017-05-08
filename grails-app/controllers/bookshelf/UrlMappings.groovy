@@ -4,6 +4,7 @@ class UrlMappings {
 
     static mappings = {
         "/authors"(resources: 'author') {
+            "/createDefaultBooks"(action: 'createDefaultBooks', method: 'POST')
         }
         "/books"(resources: 'book')
 
