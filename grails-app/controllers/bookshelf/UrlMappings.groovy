@@ -3,11 +3,9 @@ package bookshelf
 class UrlMappings {
 
     static mappings = {
-        "/$controller/$action?/$id?(.$format)?"{
-            constraints {
-                // apply constraints here
-            }
+        "/authors"(resources: 'author') {
         }
+        "/books"(resources: 'book')
 
         "/"(controller: 'application', action:'index')
         "500"(view: '/error')
