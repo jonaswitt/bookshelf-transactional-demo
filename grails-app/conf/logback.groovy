@@ -38,3 +38,9 @@ if (Environment.isDevelopmentMode() && targetDir) {
     }
     logger("StackTrace", ERROR, ['FULL_STACKTRACE'], false)
 }
+
+// Use to show order of HTTP connection flush vs. JDBC transaction commit
+//logger('grails.app.controllers.bookshelf', DEBUG)
+//logger('org.hibernate.engine.transaction.internal.jdbc', DEBUG)
+//logger('org.hibernate.SQL', DEBUG)
+//logger('org.eclipse.jetty.io.WriteFlusher', DEBUG)
