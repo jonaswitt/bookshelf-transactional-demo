@@ -22,4 +22,6 @@ class AuthorController extends RestfulController<Author> {
         books*.save(flush: true)
 
         render books as JSON
+    }
+    
 }
