@@ -17,3 +17,6 @@ As the books created in the first request are rendered & returned
 to the client before the transaction is commited, it is possible
 to encounter a race condition where the book with that ID cannot
 be found in the database for the second request.
+
+Slides for the related talk can be found at
+https://www.slideshare.net/JonasWitt1/understanding-database-transactions-and-hibernate-sessions-in-grails
